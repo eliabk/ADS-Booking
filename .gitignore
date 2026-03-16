@@ -3,6 +3,5 @@ __pycache__/
 .streamlit/
 *.pyc
 .env
-data.json
 static/hero.png
 static/logo.png

@@ -1,0 +1,36 @@
+{
+    "hero_title": "Propulsez vos Formations WordPress vers l'Excellence.",
+    "hero_subtitle": "Le plugin tout-en-un pour gérer vos inscriptions, générer des factures PDF et contrôler vos licences. Adoptez la puissance, choisissez le contrôle.",
+    "features": [
+        {
+            "icon": "🛡️",
+            "title": "Licence & Sécurité",
+            "desc": "Système de licence centralisé avec validation quotidienne. Protégez votre travail et contrôlez vos activations."
+        },
+        {
+            "icon": "📄",
+            "title": "Facturation Automatique",
+            "desc": "Générez des factures PDF professionnelles pour chaque inscription. Exportez-les en masse au format ZIP en un clic."
+        },
+        {
+            "icon": "🎨",
+            "title": "Design Personnalisable",
+            "desc": "Adaptez les styles et les couleurs à votre image de marque pour une intégration parfaite dans votre site."
+        },
+        {
+            "icon": "🔄",
+            "title": "Sauvegarde & Restauration",
+            "desc": "Ne perdez jamais vos données. Exportez et restaurez vos configurations et médias en toute simplicité."
+        }
+    ],
+    "pricing": [
+        {"label": "Gestion des Formations & Événements", "free": "✅", "pro": "✅"},
+        {"label": "Inscriptions en ligne & Shortcodes", "free": "✅", "pro": "✅"},
+        {"label": "Tableau de bord des inscriptions", "free": "✅", "pro": "✅"},
+        {"label": "Export CSV des Inscriptions", "free": "✅", "pro": "✅"},
+        {"label": "Styles & Couleurs personnalisables", "free": "❌", "pro": "✅"},
+        {"label": "Génération de Facture / Reçu PDF", "free": "❌", "pro": "✅"},
+        {"label": "Export en masse des Factures (ZIP)", "free": "❌", "pro": "✅"},
+        {"label": "Sauvegarde & Restauration (Export JSON / Media)", "free": "❌", "pro": "✅"}
+    ]
+}
