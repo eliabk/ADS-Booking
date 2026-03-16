@@ -18,10 +18,35 @@ STATIC_DIR = "static"
 
 # --- Data Management ---
 def load_data():
+    default_data = {
+        "hero_title": "Propulsez vos Formations WordPress vers l'Excellence.",
+        "hero_subtitle": "Le plugin tout-en-un pour gérer vos inscriptions, générer des factures PDF et contrôler vos licences.",
+        "features": [
+            {"icon": "🛡️", "title": "Licence & Sécurité", "desc": "Système de licence centralisé."},
+            {"icon": "📄", "title": "Facturation Automatique", "desc": "Générez des factures PDF."},
+            {"icon": "🎨", "title": "Design Personnalisable", "desc": "Adaptez les styles."},
+            {"icon": "🔄", "title": "Sauvegarde & Restauration", "desc": "Ne perdez jamais vos données."}
+        ],
+        "pricing": [
+            {"label": "Gestion des Formations & Événements", "free": "✅", "pro": "✅"},
+            {"label": "Inscriptions en ligne & Shortcodes", "free": "✅", "pro": "✅"},
+            {"label": "Tableau de bord des inscriptions", "free": "✅", "pro": "✅"},
+            {"label": "Export CSV des Inscriptions", "free": "✅", "pro": "✅"},
+            {"label": "Styles & Couleurs personnalisables", "free": "❌", "pro": "✅"},
+            {"label": "Génération de Facture / Reçu PDF", "free": "❌", "pro": "✅"},
+            {"label": "Export en masse des Factures (ZIP)", "free": "❌", "pro": "✅"},
+            {"label": "Sauvegarde & Restauration (Export JSON / Media)", "free": "❌", "pro": "✅"}
+        ]
+    }
     if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {} # Should not happen with local context
+        try:
+            with open(DATA_FILE, "r", encoding="utf-8") as f:
+                content = json.load(f)
+                # Merge with default to ensure all keys exist
+                return {**default_data, **content}
+        except:
+            return default_data
+    return default_data
 
 if "data" not in st.session_state:
     st.session_state.data = load_data()
